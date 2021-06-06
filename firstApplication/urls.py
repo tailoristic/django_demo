@@ -19,5 +19,4 @@ from course import views
 urlpatterns = [
     path('', views.home,name='home'),
     path('core/', include('course.urls')),
-    path('core/', include('course.urls')),
 ]

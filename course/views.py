@@ -6,4 +6,4 @@ def my_fun(request):
     return HttpResponse('<h1>Hello course insie url course</h1>')
 
 def home(request):
-    return render(request,'firstApplication/home.html')
+    return render(request,'home.html')

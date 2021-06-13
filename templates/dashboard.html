@@ -26,14 +26,13 @@
          {{forloop.counter0}} {{data}}<br>
          {%endfor%}
      </ul>
-
      <br><br>
 
      <!-- NESTED DICTIONARY EXAMPLE -->
      {{student}} <!-- DICTIONARY WHICH WE ARE GETTING FROM VIEW FUNCTION -->
      {%for data in student%}
          {%for key,value in data.items%}
-             <h2>Hello {{value.name}} your roll number is {{value.rollNo}}</h2>
+           <h2>Hello {{value.name}} your roll number is {{value.rollNo}}</h2>
          {%endfor%}
      {%endfor%}
 </body>

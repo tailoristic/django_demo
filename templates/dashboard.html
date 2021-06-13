@@ -12,6 +12,29 @@
         WHICH IS RESPONSIBLE FOR RENDERING THIS TEMPLATE
         |upper will Make all the chars to uppercase
      -->
+     <!-- EXAMPLE OF IF, ELIF, ELSE TAG -->
+    {% if name == 'null' %}
     <h1> Welcome to {{name|upper}}</h1>
+    {%elif name|length > 4%}
+    <h1> Length of {{name}} is {{name|length}}</h1>
+    {% else %}
+     <h1> Welcome to Hello World</h1>
+     {%endif%}
+     <!-- FOR LOOP EXAMPLE -->
+     <ul>
+         {%for data in stu%}
+         {{forloop.counter0}} {{data}}<br>
+         {%endfor%}
+     </ul>
+
+     <br><br>
+
+     <!-- NESTED DICTIONARY EXAMPLE -->
+     {{student}} <!-- DICTIONARY WHICH WE ARE GETTING FROM VIEW FUNCTION -->
+     {%for data in student%}
+         {%for key,value in data.items%}
+             <h2>Hello {{value.name}} your roll number is {{value.rollNo}}</h2>
+         {%endfor%}
+     {%endfor%}
 </body>
 </html>

@@ -1,0 +1,8 @@
+// EXTENDS TAG
+{% extends "file name"%}
+// NO END TAG FOR EXTENDS TAG
+{% extends variable %}
+'extends' tag should be first template tag(First Line) in our template file, otherwise inheritance wont work
+// BLOCK TAG
+{% block blockName %}{% endblock blockName %}
+{{block.super}} to get content from parent template

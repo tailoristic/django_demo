@@ -1,0 +1,9 @@
+body{
+    background-color: coral;
+}
+ul{
+    align-content: space-between;
+}
+li{
+    color: blueviolet;
+}

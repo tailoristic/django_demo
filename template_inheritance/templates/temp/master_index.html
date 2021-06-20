@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{%static 'style.css'%}">
+    <title>{% block title %}Django{% endblock title %}</title>
+</head>
+<body>
+    <h1>My Header</h1>
+    <nav>
+        <ul>
+            <li><a href="../home_page/">Home</a></li>
+            <li><a href="../about-page/">About</a></li>
+        </ul>
+    </nav>
+    
+    {% block content %}
+    {% endblock content %}
+    <h1>My Footer</h1>
+</body>
+</html>

@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'course',
     'fees',
+    'template_inheritance',
 ]
 
 MIDDLEWARE = [

@@ -12,10 +12,25 @@
     <h1>My Header</h1>
     <nav>
         <ul>
-            <li><a href="../home_page/">Home</a></li>
-            <li><a href="../about-page/">About</a></li>
+            <!-- HYPER LINK DEMO -->
+            <!-- url path eg: path("about/") -->
+            <!-- use it as href="/about" -->
+            <!-- for multi level use -->
+            <!-- use it as href="../about/" -->
+            <!-- USING name paramter in path fn -->
+             <!-- Can also pass from view fn -->
+            <li><a href="{% url 'homePage' %}">Home</a></li>
+            <li><a href="{% url 'aboutPage' %}">About</a></li>
         </ul>
     </nav>
+
+    <!-- Create widgets using  -->
+    <!-- {% include "page-name.html" %} -->
+    <!-- Pass content -->
+    <!-- {% include "page-name.html" with listData = "Data" %} -->
+     <!-- use only to not pass parent content -->
+    <!-- {% include "page-name.html" with listData = "Data" only%} -->
+
     
     {% block content %}
     {% endblock content %}

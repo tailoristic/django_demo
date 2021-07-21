@@ -16,8 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 from course import views
+from modelApp import views as model
+
 urlpatterns = [
     path('', views.home,name='home'),
+    path('model/', model.modelIndex),
     path('core/', include('course.urls')),
+    path('', include('formApp.urls')),
     path('inheritance/', include('template_inheritance.urls')),
 ]

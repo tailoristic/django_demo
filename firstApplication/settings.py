@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'course',
     'fees',
     'template_inheritance',
+    'modelApp',
+    'formApp',
 ]
 
 MIDDLEWARE = [

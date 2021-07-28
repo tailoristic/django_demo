@@ -65,7 +65,7 @@ def formInputs(request):
         if fm.is_valid():
             print("FORM VALIDATED")
             print("NAME",fm.cleaned_data['name'])
-            print("I AGREE",fm.cleaned_data['agree'])
+            print("NAME",fm.cleaned_data['roll'])
             context = {'name':fm.cleaned_data['name']}
             # return HttpResponseRedirect('/success/')
             # return render(request,'formApp/home_page.html',context)

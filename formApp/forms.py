@@ -43,4 +43,16 @@ class FormField(forms.Form):
         if valRoll:
             if valRoll < 10:
                 raise forms.ValidationError('Value <= 10')
-        
+            
+class ErrorStyleForm(forms.Form):
+    error_css_class='error'
+    required_css_class='required'
+    name = forms.CharField(error_messages={'required':'Enter your name'})
+    email = forms.EmailField(error_messages={'required':'Enter your email'}, min_length=5)
+    password = forms.CharField(widget=forms.PasswordInput,min_length=8, error_messages={'required':'Enter your password'})
+
+class SaveForm(forms.Form):
+    name = forms.CharField(error_messages={'required':'Enter your name'})
+    email = forms.EmailField(error_messages={'required':'Enter your email'})
+    password = forms.CharField(widget=forms.PasswordInput, error_messages={'required':'Enter your password'})
+    

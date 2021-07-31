@@ -18,6 +18,7 @@ from django.urls import path,include
 from course import views
 from formApp import views as formView
 from modelApp import views as model
+from modelForm import views as modelForm
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -26,4 +27,5 @@ urlpatterns = [
     path('core/', include('course.urls')),
     path('', include('formApp.urls')),
     path('inheritance/', include('template_inheritance.urls')),
+    path('', include('modelForm.urls'), name="ModelForm"),
 ]

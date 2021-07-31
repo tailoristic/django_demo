@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'template_inheritance',
     'modelApp',
     'formApp',
+    'modelForm',
 ]
 
 MIDDLEWARE = [

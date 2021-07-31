@@ -4,5 +4,7 @@ urlpatterns = [
     path('registration/',views.formRendering),
     path('form-attrib/',views.formAttrib),
     path('success/',views.thanks),
-    path('form-inputs/',views.formInputs)
+    path('form-inputs/',views.formInputs),
+    path('error-style/',views.errorStyle),
+    path('save-form/',views.saveForm),
 ]

@@ -28,4 +28,5 @@ urlpatterns = [
     path('', include('formApp.urls')),
     path('inheritance/', include('template_inheritance.urls')),
     path('', include('modelForm.urls'), name="ModelForm"),
+    path('', include('dynamicUrl.urls')),
 ]

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>{{year}}</h1>
+    {% for data in cards %}
+    <div>
+        <a href="{% url 'dynamicUrl' data %}">Goto {{data}}</a>
+    </div>
+    {% endfor %}
+    <br>
+    {% for data in cards %}
+    {% for sub in subdata %}
+    <div>
+        <a href="{% url 'subdynamicUrl' data sub%}">Goto {{data}} & Sub {{sub}}</a>
+    </div>
+    {% endfor %}
+    {% endfor %}
+ 
+    
+</body>
+</html>

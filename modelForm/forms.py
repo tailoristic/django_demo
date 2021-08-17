@@ -23,3 +23,12 @@ class StudentRegistration(forms.ModelForm):
             'password': forms.PasswordInput,
             'name': forms.TextInput(attrs={'class': 'myclass', 'placeholder': 'Name here'})
         }
+
+#  ! Selecting field
+class StudenSelectRegistration(forms.ModelForm):
+    class Meta:
+        model = User
+        fields = ['name', 'email', 'password']
+        # fields = '__all__' TO GET ALL THE FIELDS IN ORDER SET BY MODEL CLAS
+        # exclude = ['name']  TO REMOVE FIELDS WHICH WE DONT NEED IN OUR FORM
+        # exclude = ('name',) TUPLE

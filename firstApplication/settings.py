@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
+from django.contrib.messages import constants as messages
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -45,7 +46,18 @@ INSTALLED_APPS = [
     'formApp',
     'modelForm',
     'dynamicUrl',
+    'modelInheritance',
+    'messageApp',
+    'authentication',
 ]
+# Message Tags
+MESSAGE_TAGS = {
+    messages.ERROR: 'danger',
+    messages.DEBUG: 'info',
+    messages.SUCCESS: 'success',
+    messages.INFO: 'info',
+}
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

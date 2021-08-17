@@ -19,6 +19,8 @@ from course import views
 from formApp import views as formView
 from modelApp import views as model
 from modelForm import views as modelForm
+from modelInheritance import views as modelInher
+from messageApp import views as msgView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -29,4 +31,10 @@ urlpatterns = [
     path('inheritance/', include('template_inheritance.urls')),
     path('', include('modelForm.urls'), name="ModelForm"),
     path('', include('dynamicUrl.urls')),
+    path('model-inheritance/student/',modelInher.student_form, name="student_inher" ),
+    path('model-inheritance/teacher/',modelInher.teacher_form, name="teacher_inher" ),
+    path('message/', msgView.msg_view, name="msg_view"),
+    path('authentication/', include('authentication.urls')),
 ]
+# ! path('/student/', views.home,name='home'), <-- WRONG 
+# * path('student/', views.home,name='home'), <-- RIGHT 

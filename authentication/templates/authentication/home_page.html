@@ -7,10 +7,53 @@
     <title>HomePage</title>
   </head>
   <body>
+    <h2>Perms</h2>
+  
+    <!-- <input type="button" value="Add" /><br><br>
+    <input type="button" value="Change" /><br><br> -->
+    <!-- 
+      perms.authentication is application name
+      .delete is action to perform on model
+      _blog is model name
+       -->
+    {% if perms.authentication.delete_blog %}
+    <input type="button" value="Delete" /><br><br>
+    {% endif %}
+      
+    <!-- <input type="button" value="View" /><br><br> -->
+    
+      
+
+    <br /><br />
     <h2>Welcome! {{name}}</h2>
 
     {% if messages %} {% for msg in messages %}
     <small {% if msg.tags %} class="{{msg.tags}}" {% endif %}>{{msg}}</small>
+    {% endfor %} {% endif %}
+
+    <form action="" method="POST" novalidate>
+      {% csrf_token %} 
+      {% if form.no_field_errors %} 
+      {% for error in form.non_fields_errors %}
+      <p>{{ error }}</p>
+      {% endfor %}
+      {% endif %}
+       {% for fm in form %} 
+       {{fm.label_tag}} 
+       {{fm}}
+      {{fm.errors|striptags}} <br /><br />
+      {% endfor %}
+      <input type="submit" value="Save" />
+    </form>
+
+    {% if users != None %} {% for user in users %}
+    <div>
+      <p><a href="{% url 'userdetails' user.id %}">{{user.username}}</a></p>
+    </div>
+    <div>
+      <p>{{user.email}}</p>
+    </div>
+    <br />
     {% endfor %} {% endif %}
 
     <a href="{% url 'changePass' %}">Change Password</a>

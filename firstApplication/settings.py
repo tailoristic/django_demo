@@ -49,6 +49,9 @@ INSTALLED_APPS = [
     'modelInheritance',
     'messageApp',
     'authentication',
+    'cookies',
+    'sesions',
+    'pagecounter',
 ]
 # Message Tags
 MESSAGE_TAGS = {
@@ -144,3 +147,12 @@ STATICFILES_DIRS = [STATIC_DIR]
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# SESSION_COOKIE_AGE = 400000000000 
+# SESSION_COOKIE_NAME = 'gumgle'
+# SESSION_COOKIE_PATH = '/home'
+# SESSION_COOKIE_HTTPONLY = True  BY DEFAUT TRUE
+# SESSION_COOKIE_SECURE = True # BY DEFAULT FALSE
+# SESSION_EXPIRE_AT_BROWSER_CLOSE
+# SESSION_ENGINE = 'django.contrib.sessions.backends.file'
+# SESSION_FILE_PATH = os.path.join(BASE_DIR,'session') make folder of session in project level

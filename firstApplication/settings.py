@@ -52,6 +52,8 @@ INSTALLED_APPS = [
     'cookies',
     'sesions',
     'pagecounter',
+    'signals',   
+    'queryset',
 ]
 # Message Tags
 MESSAGE_TAGS = {

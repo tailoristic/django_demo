@@ -50,6 +50,7 @@ urlpatterns = [
     path('session-test/set/', sessionView.set_test_cookie, name='set_test_cookie'),
     path('session-test/get/', sessionView.get_test_cookie, name='get_test_cookie'),
     path('session-test/del/', sessionView.del_test_cookie, name='del_test_cookie'),
+    path('query/', include('queryset.urls')),
 ]
 # ! path('/student/', views.home,name='home'), <-- WRONG
 # * path('student/', views.home,name='home'), <-- RIGHT
